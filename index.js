@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 
 //IMPORT ROUTES
 require('./routes/productRoutes')(app);
+require('./routes/clientRoutes')(app);
+require('./routes/mailingRoutes')(app);
+require('./routes/materialRoutes')(app);
+require('./routes/packageRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
